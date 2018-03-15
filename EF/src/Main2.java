@@ -5,6 +5,7 @@
  * and open the template in the editor.
  */
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.BorderFactory;
@@ -23,9 +24,15 @@ public class Main2 {
         janelaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         janelaPrincipal.setVisible(true);
         
-        JPanel painel = new JPanel();
-        painel.setBorder(BorderFactory.createLineBorder(Color.ORANGE));
+        JPanel painel_top = new JPanel();
+        painel_top.setBorder(BorderFactory.createLineBorder(Color.BLUE));
+        JPanel painel_center = new JPanel();
+        painel_center.setBorder(BorderFactory.createLineBorder(Color.ORANGE));
+        JPanel painel_bot = new JPanel();
+        painel_bot.setBorder(BorderFactory.createLineBorder(Color.BLUE));
         
-        janelaPrincipal.add(painel);
+        janelaPrincipal.add(painel_top, BorderLayout.NORTH);
+        janelaPrincipal.add(painel_center, BorderLayout.CENTER);
+        janelaPrincipal.add(painel_bot, BorderLayout.SOUTH);
     }
 }
